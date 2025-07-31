@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateX(-50px);
+      animation: slideIn 1s forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="slide-in">
+      <div class="browser-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <nav>
+        <div class="logo">Sambasivarao-Mamidi</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/sambasivarao-mamidi/" aria-label="LinkedIn profile">
+            <img src="linkedin-logo.png" alt="LinkedIn" class="social-icon" loading="lazy" />
+          </a>
+          <a href="https://github.com/Sambasivarao-Mamidi" aria-label="GitHub profile">
+            <img src="github-logo.png" alt="GitHub" class="social-icon" loading="lazy" />
+          </a>
+          <a href="mailto:m.samba0000@gmail.com" aria-label="Email me">
+            <img src="email-icon.png" alt="Email" class="social-icon" loading="lazy" />
+          </a>
+        </div>
+        <div id="mode-toggle" class="toggle-container" role="button" aria-label="Toggle dark and light mode">
+          <div class="toggle-icon">💡</div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero fade-in">
+      <div class="hero-text">
+        <div class="tag">The Tech Explorer & Builder 🛠️</div>
+        <h1>Engineering is the art of making the impossible possible, one line of code and circuit at a time.<br />Using 1's and 0's.</h1>
+        <p>Problem solving is what makes me unique.</p>
+
+        <div class="stats">
+          <div><h2>3</h2><span>Years of Experience</span></div>
+          <div><h2>121</h2><span>Projects / Contributions</span></div>
+        </div>
+
+        <button class="cv-btn" onclick="alert('CV Download not available yet')">View CV</button>
+      </div>
+
+      <div class="hero-image">
+        <img src="sanji.jpg" alt="Profile" class="profile" loading="lazy" />
+        <img src="python-logo.png" class="icon python" alt="Python" loading="lazy" />
+        <img src="Front-end.png" class="icon Front-end" alt="Front-end" loading="lazy" />
+        <img src="Embedded C.png" class="icon Embedded C" alt="Embedded C" loading="lazy" />
+      </div>
+    </section>
+
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="your-headshot.jpg" alt="Your Name - Professional Headshot" class="about-image" />
+        <p>I'm an Electronics and Communication Engineering (ECE) undergraduate with a passion for building at the intersection of hardware and software. My journey involves crafting efficient solutions with Python and Data Structures & Algorithms, bringing ideas to life through HTML, CSS, and JavaScript for intuitive web experiences, and delving into Embedded C to connect code with the physical world. I'm a driven and curious individual, constantly exploring new technologies to solve real-world problems.</p>
+        <p>Here are some of my key skills:</p>
+        <ul class="skills-list">
+          <li>Python (Data Structures & Algorithms)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Embedded C</li>
+          <li>Teamwork & Communication</li>
+          <li>Problem-Solving</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail" class="project-image" />
+          <h3>Project Title 1</h3>
+          <p>A brief description of your project. Mention the technologies used (e.g., Python, Embedded C) and its key features.</p>
+          <a href="#">Live Demo</a>
+          <a href="#">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail" class="project-image" />
+          <h3>Project Title 2</h3>
+          <p>A brief description of your project. Mention the technologies used (e.g., Python, Embedded C) and its key features.</p>
+          <a href="#">Live Demo</a>
+          <a href="#">View on GitHub</a>
+        </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="fade-in">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <img src="cert-python.jpg" alt="Python Certification" class="certification-image" />
+                <h3>Python for Data Science</h3>
+                <p>Issued by Coursera, this certification validates my skills in Python programming for data analysis and visualization.</p>
+                <a href="#">View Credential</a>
+            </div>
+            <div class="certification-card">
+                <img src="cert-webdev.jpg" alt="Web Dev Certification" class="certification-image" />
+                <h3>Front-End Web Development</h3>
+                <p>A certificate from FreeCodeCamp, demonstrating proficiency in HTML, CSS, and JavaScript for modern web applications.</p>
+                <a href="#">View Credential</a>
+            </div>
+            </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Get In Touch</h2>
+      <p class="contact-intro">I'm currently looking for new opportunities and would love to connect. Feel free to reach out!</p>
+      <div class="contact-content">
+        <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit" class="cv-btn">Send Message</button>
+        </form>
+        <div class="socials contact-socials">
+          <a href="https://www.linkedin.com/in/sambasivarao-mamidi/" aria-label="LinkedIn profile">
+            <img src="linkedin-logo.png" alt="LinkedIn" class="social-icon" loading="lazy" />
+          </a>
+          <a href="https://github.com/Sambasivarao-Mamidi" aria-label="GitHub profile">
+            <img src="github-logo.png" alt="GitHub" class="social-icon" loading="lazy" />
+          </a>
+          <a href="mailto:m.samba0000@gmail.com" aria-label="Email me">
+            <img src="email-icon.png" alt="Email" class="social-icon" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
